@@ -246,4 +246,4 @@ Este proyecto está en fase temprana. Si eres:
 
 ---
 
-*Construido con ❤️ para el litoral peruano — Solana Devnet 2025*
+*Construido con ❤️ para el litoral peruano — Solana Devnet 2026*
