@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0a0015;
+    color: #f0e6ff;
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Pixel-art aesthetic card */
+  .pixel-card {
+    @apply bg-[#1c0a35] rounded-lg border border-[#3d2062];
+    box-shadow:
+      0 0 0 1px #3d2062,
+      4px 4px 0 #0a0015;
+  }
+
+  .pixel-border {
+    border: 1px solid #3d2062;
+    box-shadow: 2px 2px 0 #0a0015;
+  }
+
+  .pixel-text {
+    font-family: "Press Start 2P", monospace;
+    letter-spacing: 0.05em;
+    text-shadow: 2px 2px #0a0015;
+  }
+
+  /* Buttons */
+  .btn-pink {
+    @apply px-4 py-2 rounded font-semibold text-sm transition-all bg-pink-500 text-white;
+    box-shadow: 0 3px 0 #9d174d;
+  }
+  .btn-pink:hover:not(:disabled) {
+    @apply bg-pink-400;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 0 #9d174d;
+  }
+  .btn-pink:active:not(:disabled) {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #9d174d;
+  }
+  .btn-pink:disabled {
+    @apply opacity-40 cursor-not-allowed;
+  }
+
+  .btn-purple {
+    @apply px-4 py-2 rounded font-semibold text-sm transition-all bg-purple-600 text-white;
+    box-shadow: 0 3px 0 #4c1d95;
+  }
+  .btn-purple:hover:not(:disabled) {
+    @apply bg-purple-500;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 0 #4c1d95;
+  }
+  .btn-purple:active:not(:disabled) {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #4c1d95;
+  }
+  .btn-purple:disabled {
+    @apply opacity-40 cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply px-4 py-2 rounded font-semibold text-sm transition-all bg-transparent border border-[#3d2062] text-gray-300;
+    box-shadow: 0 3px 0 #0a0015;
+  }
+  .btn-outline:hover {
+    @apply bg-[#2d1b4e];
+  }
+
+  .btn-disabled {
+    @apply px-4 py-2 rounded font-semibold text-sm bg-gray-800 text-gray-500 cursor-not-allowed;
+    box-shadow: 0 3px 0 #0a0015;
+  }
+}
+
+@layer utilities {
+  .animate-bounce-slow {
+    animation: bounceSlow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* Override wallet adapter button */
+.wallet-adapter-button {
+  font-family: "Inter", sans-serif !important;
+  background-color: #9333ea !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  padding: 8px 16px !important;
+  box-shadow: 0 3px 0 #4c1d95 !important;
+}
+.wallet-adapter-button:hover {
+  background-color: #a855f7 !important;
+}
+.wallet-adapter-modal-wrapper {
+  background: #1c0a35 !important;
+  border: 1px solid #3d2062 !important;
+}

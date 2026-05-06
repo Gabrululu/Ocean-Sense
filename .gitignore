@@ -1,0 +1,39 @@
+# ── Rust / Anchor ────────────────────────────────────────────────────────────
+target/
+.anchor/
+**/*.rs.bk
+
+# ── Node / Frontend ──────────────────────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── Entornos y secretos ───────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ── Wallets y keypairs ───────────────────────────────────────────────────────
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!frontend/package.json
+!frontend/package-lock.json
+!frontend/tsconfig.json
+!frontend/tailwind.config.js
+!frontend/postcss.config.js
+!frontend/vite.config.ts
+
+# ── IDEs ─────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
